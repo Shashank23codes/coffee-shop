@@ -66,3 +66,15 @@ Builds the app for production to the `build` folder.
 2. Install dependencies: `npm install`
 3. Start development server: `npm start`
 4. Open [http://localhost:3000](http://localhost:3000)
+
+## Deployment
+
+This website is deployed using GitHub Pages. To deploy:
+
+1. Update the `homepage` field in `package.json` with your GitHub Pages URL
+2. Run `npm run deploy`
+3. Go to your repository's Settings > Pages
+4. Select `gh-pages` branch as the source
+5. Your site will be available at: https://Shashank23codes.github.io/coffee-shop
+
+Note: Replace `Shashank23codes` with your actual GitHub username.
