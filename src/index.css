@@ -1,13 +1,103 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Color Palette - Luxury Coffee */
+  --color-primary: #2C1A1D;
+  /* Deep Espresso */
+  --color-secondary: #A98467;
+  /* Latte */
+  --color-accent: #D4A373;
+  /* Caramel */
+  --color-light: #F0EAD6;
+  /* Eggshell Cream */
+  --color-bg: #FCFBF4;
+  /* Off-white paper */
+  --color-text-main: #2b2b2b;
+  --color-text-muted: #666;
+  --color-white: #ffffff;
+
+  /* Gradients */
+  --gradient-coffee: linear-gradient(135deg, #2C1A1D 0%, #4A332A 100%);
+  --gradient-gold: linear-gradient(135deg, #D4A373 0%, #A98467 100%);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(44, 26, 29, 0.05);
+  --shadow-md: 0 4px 6px rgba(44, 26, 29, 0.1);
+  --shadow-lg: 0 10px 15px rgba(44, 26, 29, 0.1);
+  --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }

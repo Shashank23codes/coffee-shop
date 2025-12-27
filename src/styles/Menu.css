@@ -1,15 +1,102 @@
 .menu {
-    background-color: #f3e5dc;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-  }
-  .menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  .menu li {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-  }
-  
+  padding: 4rem 1rem;
+  background-color: var(--color-bg);
+}
+
+.menu .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.menu-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.menu-item {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  text-align: left;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-item:hover::before {
+  opacity: 1;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.description {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #fdf6f0;
+  color: var(--color-accent);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

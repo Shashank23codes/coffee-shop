@@ -1,14 +1,90 @@
-
 .hero {
-    background-color: #d9c1a3;
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-light);
+  padding: 0 1rem;
+  margin-bottom: 4rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  color: var(--color-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.hero-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 163, 115, 0.4);
+  animation: fadeInUp 1s ease-out 0.8s both;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212, 163, 115, 0.6);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
   }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
   }
+
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
-  
+}

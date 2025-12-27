@@ -1,0 +1,70 @@
+.about-page {
+    padding: 8rem 2rem 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.about-hero h2 {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.about-hero p {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.value-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--color-secondary);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.value-card p {
+    color: var(--color-text-muted);
+}
+
+.about-footer p {
+    font-size: 1.3rem;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

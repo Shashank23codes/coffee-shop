@@ -1,7 +1,30 @@
 .App {
-  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.page-content {
+  padding: 8rem 2rem 4rem;
+  /* Top padding to account for fixed navbar */
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  background-color: #fdf6f0;
-  color: #4b2e2e;
-  padding: 2rem;
+}
+
+.page-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.page-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
 }

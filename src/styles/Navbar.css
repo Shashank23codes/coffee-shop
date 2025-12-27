@@ -1,30 +1,70 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #a67c52;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(44, 26, 29, 0.95);
+  /* Deep coffee with slight transparency */
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.navbar h1 {
+  color: var(--color-light);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-secondary);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-secondary);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
   }
-  
-  .navbar h1 {
-    color: #fff;
-  }
-  
+
   .navbar ul {
-    display: flex;
-    list-style: none;
+    margin-top: 1rem;
     gap: 1.5rem;
   }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline;
-  }
-  
+}
